@@ -43,7 +43,7 @@ class OrderShipmentUseCaseTest {
 
         assertThatThrownBy(() -> {
             useCase.run(request);
-        }).isInstanceOf(OrderCannotBeShippedException.class);
+        }).isExactlyInstanceOf(OrderCannotBeShippedException.class);
 
         assertThat(orderRepository.getSavedOrder())
             .isNull();
@@ -63,7 +63,7 @@ class OrderShipmentUseCaseTest {
 
         assertThatThrownBy(() -> {
             useCase.run(request);
-        }).isInstanceOf(OrderCannotBeShippedException.class);
+        }).isExactlyInstanceOf(OrderCannotBeShippedException.class);
 
         assertThat(orderRepository.getSavedOrder())
             .isNull();
@@ -83,7 +83,7 @@ class OrderShipmentUseCaseTest {
 
         assertThatThrownBy(() -> {
             useCase.run(request);
-        }).isInstanceOf(OrderCannotBeShippedTwiceException.class);
+        }).isExactlyInstanceOf(OrderCannotBeShippedTwiceException.class);
 
         assertThat(orderRepository.getSavedOrder())
             .isNull();

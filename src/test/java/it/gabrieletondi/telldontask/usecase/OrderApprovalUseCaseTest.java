@@ -60,7 +60,7 @@ class OrderApprovalUseCaseTest {
 
         assertThatThrownBy(() -> {
             useCase.run(request);
-        }).isInstanceOf(RejectedOrderCannotBeApprovedException.class);
+        }).isExactlyInstanceOf(RejectedOrderCannotBeApprovedException.class);
 
         assertThat(orderRepository.getSavedOrder())
             .isNull();
@@ -79,7 +79,7 @@ class OrderApprovalUseCaseTest {
 
         assertThatThrownBy(() -> {
             useCase.run(request);
-        }).isInstanceOf(ApprovedOrderCannotBeRejectedException.class);
+        }).isExactlyInstanceOf(ApprovedOrderCannotBeRejectedException.class);
 
         assertThat(orderRepository.getSavedOrder())
             .isNull();
@@ -98,7 +98,7 @@ class OrderApprovalUseCaseTest {
 
         assertThatThrownBy(() -> {
             useCase.run(request);
-        }).isInstanceOf(ShippedOrdersCannotBeChangedException.class);
+        }).isExactlyInstanceOf(ShippedOrdersCannotBeChangedException.class);
 
         assertThat(orderRepository.getSavedOrder())
             .isNull();
@@ -117,7 +117,7 @@ class OrderApprovalUseCaseTest {
 
         assertThatThrownBy(() -> {
             useCase.run(request);
-        }).isInstanceOf(ShippedOrdersCannotBeChangedException.class);
+        }).isExactlyInstanceOf(ShippedOrdersCannotBeChangedException.class);
 
         assertThat(orderRepository.getSavedOrder())
             .isNull();

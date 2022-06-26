@@ -97,6 +97,6 @@ class OrderCreationUseCaseTest {
 
         assertThatThrownBy(() -> {
             useCase.run(request);
-        }).isInstanceOf(UnknownProductException.class);
+        }).isExactlyInstanceOf(UnknownProductException.class);
     }
 }
