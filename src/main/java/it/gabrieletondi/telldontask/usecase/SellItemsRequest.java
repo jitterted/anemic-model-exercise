@@ -1,4 +1,4 @@
-package it.gabrieletondi.telldontask.useCase;
+package it.gabrieletondi.telldontask.usecase;
 
 import java.util.List;
 

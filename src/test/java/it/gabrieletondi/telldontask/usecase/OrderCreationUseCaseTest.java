@@ -1,4 +1,4 @@
-package it.gabrieletondi.telldontask.useCase;
+package it.gabrieletondi.telldontask.usecase;
 
 import it.gabrieletondi.telldontask.domain.Category;
 import it.gabrieletondi.telldontask.domain.Order;
@@ -15,7 +15,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class OrderCreationUseCaseTest {
+class OrderCreationUseCaseTest {
     private final TestOrderRepository orderRepository = new TestOrderRepository();
     private Category food = new Category() {{
         setName("food");
@@ -38,7 +38,7 @@ public class OrderCreationUseCaseTest {
     private final OrderCreationUseCase useCase = new OrderCreationUseCase(orderRepository, productCatalog);
 
     @Test
-    public void sellMultipleItems() throws Exception {
+    void sellMultipleItems() throws Exception {
         SellItemRequest saladRequest = new SellItemRequest();
         saladRequest.setProductName("salad");
         saladRequest.setQuantity(2);
@@ -88,7 +88,7 @@ public class OrderCreationUseCaseTest {
     }
 
     @Test
-    public void unknownProduct() throws Exception {
+    void unknownProduct() throws Exception {
         SellItemsRequest request = new SellItemsRequest();
         request.setRequests(new ArrayList<>());
         SellItemRequest unknownProductRequest = new SellItemRequest();

@@ -6,7 +6,7 @@
 > 
 > Also replaced references to "kata" to be "exercise"
 
-A legacy refactor exercise, focused on the violation of the [tell don't ask](https://toolshed.com/articles/1998-07-01-TellDontAsk.html) principle and the [anemic domain model](https://martinfowler.com/bliki/AnemicDomainModel.html).
+A legacy refactor exercise, focused on the violation of Andy Hunt's [tell don't ask](https://toolshed.com/articles/1998-07-01-TellDontAsk.html) heuristic (also see [Fowler](https://martinfowler.com/bliki/TellDontAsk.html)) principle and the [anemic domain model](https://martinfowler.com/bliki/AnemicDomainModel.html).
 
 ## Instructions
 Here you find a simple order flow application. It's able to create orders, do some calculations (totals and taxes), and manage them (approve/reject and ship).

@@ -9,15 +9,21 @@
     <version>1.0.0</version>
 
     <properties>
-        <junit.version>5.7.1</junit.version>
-        <assertj.version>3.18.1</assertj.version>
+        <java.version>11</java.version>
+        <junit.version>5.8.2</junit.version>
+        <assertj.version>3.23.1</assertj.version>
+
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.jmolecules</groupId>
             <artifactId>jmolecules-ddd</artifactId>
-            <version>1.1.0</version>
+            <version>1.5.0</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -44,11 +50,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>11</source>
-                    <target>11</target>
-                </configuration>
+                <version>3.10.1</version>
             </plugin>
         </plugins>
     </build>

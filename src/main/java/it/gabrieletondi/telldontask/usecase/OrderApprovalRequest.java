@@ -1,4 +1,4 @@
-package it.gabrieletondi.telldontask.useCase;
+package it.gabrieletondi.telldontask.usecase;
 
 public class OrderApprovalRequest {
     private int orderId;

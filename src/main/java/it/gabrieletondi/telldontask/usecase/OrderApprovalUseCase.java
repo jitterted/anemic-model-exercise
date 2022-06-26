@@ -1,4 +1,4 @@
-package it.gabrieletondi.telldontask.useCase;
+package it.gabrieletondi.telldontask.usecase;
 
 import it.gabrieletondi.telldontask.domain.Order;
 import it.gabrieletondi.telldontask.domain.OrderStatus;

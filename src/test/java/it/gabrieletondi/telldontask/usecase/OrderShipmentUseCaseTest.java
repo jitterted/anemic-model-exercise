@@ -1,4 +1,4 @@
-package it.gabrieletondi.telldontask.useCase;
+package it.gabrieletondi.telldontask.usecase;
 
 import it.gabrieletondi.telldontask.domain.Order;
 import it.gabrieletondi.telldontask.domain.OrderStatus;
@@ -8,13 +8,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class OrderShipmentUseCaseTest {
+class OrderShipmentUseCaseTest {
     private final TestOrderRepository orderRepository = new TestOrderRepository();
     private final TestShipmentService shipmentService = new TestShipmentService();
     private final OrderShipmentUseCase useCase = new OrderShipmentUseCase(orderRepository, shipmentService);
 
     @Test
-    public void shipApprovedOrder() throws Exception {
+    void shipApprovedOrder() throws Exception {
         Order initialOrder = new Order();
         initialOrder.setId(1);
         initialOrder.setStatus(OrderStatus.APPROVED);
@@ -32,7 +32,7 @@ public class OrderShipmentUseCaseTest {
     }
 
     @Test
-    public void createdOrdersCannotBeShipped() throws Exception {
+    void createdOrdersCannotBeShipped() throws Exception {
         Order initialOrder = new Order();
         initialOrder.setId(1);
         initialOrder.setStatus(OrderStatus.CREATED);
@@ -52,7 +52,7 @@ public class OrderShipmentUseCaseTest {
     }
 
     @Test
-    public void rejectedOrdersCannotBeShipped() throws Exception {
+    void rejectedOrdersCannotBeShipped() throws Exception {
         Order initialOrder = new Order();
         initialOrder.setId(1);
         initialOrder.setStatus(OrderStatus.REJECTED);
@@ -72,7 +72,7 @@ public class OrderShipmentUseCaseTest {
     }
 
     @Test
-    public void shippedOrdersCannotBeShippedAgain() throws Exception {
+    void shippedOrdersCannotBeShippedAgain() throws Exception {
         Order initialOrder = new Order();
         initialOrder.setId(1);
         initialOrder.setStatus(OrderStatus.SHIPPED);
